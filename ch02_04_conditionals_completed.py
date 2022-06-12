@@ -3,35 +3,34 @@
 # Example file - conditional statements
 #
 
+def start():
+    x, y = 20, 200
 
-def main():
-    x, y = 10, 100
-
-    # if, elif, else usage
+    # How to use if, elif and else 
     if x < y:
         result = "x is less than y"
     elif x == y:
-        result = "x is same as y"
+        result = "x equals to y"
     else:
         result = "x is greater than y"
     print(result)
 
-    # conditional statements"
+    # How to use conditional statement
     result = "x is less than y" if (x < y) else "x is greater than or equal to y"
     print(result)
 
-    # multiple comparisons with match-case (Python 3.10)
-    value = "one"
-    match value:
-        case "one":
-            result = 1
-        case "two":
-            result = 2
-        case "three" | "four":
-            result = (3, 4)
+    # How match-case helps for multiple comparisons
+    caseNumber  = 1
+    match caseNumber:
+        case 1:
+            result = "one"
+        case 2:
+            result = "two"
+        case 3 | 4:
+            result = "three or four"
         case _:
-            result = -1
+            result = "default"
     print(result)
 
 if __name__ == "__main__":
-    main()
+    start()

@@ -4,40 +4,41 @@
 #
 
 
-# define a  function
-def func1():
-    print("I am a function")
+# new function definition 
+def functionA():
+    print("I am functionA")
 
-# function that has arguments
-def func2(arg1, arg2):
+# How to use arguments in a function
+def functionB(arg1, arg2):
     print(arg1, " ", arg2)
 
-# function that returns a value
-def cube(x):
-    return x*x*x
+# How to return a value from a function
+def functionSquare(x):
+    return x*x
 
-# function with an argument has default value
-def power(num, x=1):
+# How to give default value to an argument in a function
+def functionPower(num, x=1):
     result = 1
     for i in range(x):
         result = result * num
     return result
 
-# function has variable number of arguments
-def multi_add(*args):
+# How to create a function with variable number of arguments
+def multiArgFunction(*args):
     result = 0
     for x in args:
         result = result + x
     return result
 
 
-func1()
-print(func1())
-print(func1)
-func2(10, 20)
-print(func2(10, 20))
-print(cube(3))
-print(power(2))
-print(power(2, 3))
-print(power(x=3, num=2))
-print(multi_add(4, 5, 10, 4))
+functionA()
+print(functionA())
+print(functionA)
+functionB(20, 30)
+print(functionB(20, 30))
+print(functionSquare(5))
+print(functionPower(2))
+print(functionPower(2, 3))
+print(functionPower(x=3, num=2))
+print(multiArgFunction(3, 3, 5, 5, 4))
+print(multiArgFunction(3, 3, 5, 5, 4, 10))

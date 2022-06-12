@@ -8,7 +8,7 @@ integerVar = 5
 floatVar = 13.2
 stringVar = "This is a string variable"
 booleanVar = True
-list = [0, 1, "two", 3.2, False]
+list = [0, 1, "two", 3.9, True]
 tuple = (0, 1, 2)
 dictionary = {"one" : 1, "two" : 2}
 

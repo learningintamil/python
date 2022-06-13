@@ -3,22 +3,21 @@
 # Example file - Exceptions
 #
 
-
+# How to handle error in a program
 try:
-    x = 10 / 0
+    x = 8 / 0
 except:
-    print("Well that didn't work!")
+    print("This didn't work.")
 
-# how to catch specific exceptions
+# catching specific exceptions
 try:
-    answer = input("What should I divide 10 by?")
-    num = int(answer)
-    print(10 / num)
+    inputNumber = input("Enter a number: ")
+    num = int(inputNumber)
+    print(100 / num)
 except ZeroDivisionError as e:
-    print("You can't divide by zero!")
+    print("You can't divide by zero")
 except ValueError as e:
-    print("You didn't give me a valid number!")
+    print("This is not a valid number.!")
     print(e)
 finally:
-    print("The finally section always runs")
-
+    print("finally block always runs.")

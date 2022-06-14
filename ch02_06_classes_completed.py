@@ -3,50 +3,47 @@
 # Example file - classes
 #
 
-class Animal():
-    def __init__(self, name):
-        self.name = name
+class Computer():
+    def __init__(self, bodyStyle):
+        self.bodyStyle = bodyStyle
 
-    def walk(self, speed ):
-        self.eats  = "food"
+    def boot(self, speed ):
+        self.mode  = "booting"
         self.speed  = speed 
 
+class Desktop(Computer):
+    def __init__(self, processorType):
+        super().__init__("Desktop")
+        self.camera = 0
+        self.cdDrive = 2
+        self.processor = processorType
 
-class Dog(Animal):
-    def __init__(self, animalType):
-        super().__init__("Dog")
-        self.age = 10
-        self.legs = 4
-        self.type = animalType
+    def boot(self, speed):
+        super().boot(speed)
+        print(self.bodyStyle, "Booting with", self.processor, "processor in", self.speed, "seconds")
 
-    def walk(self, speed):
-        super().walk(speed)
-        print("Walking ", self.type, " Dog at ", self.speed)
-
-
-class Tiger(Animal):
-    def __init__(self, animalType, age):
-        if(age < 7):
-            super().__init__("Tiger Cub")
+class Laptop(Computer):
+    def __init__(self, processorType, hasCamera):
+        super().__init__("Laptop")
+        if (hasCamera):
+            self.camera = 1
         else:
-            super().__init__("Tiger")
-		
-        self.legs = 4
-        self.type = animalType
+            self.camera = 0
+        self.cdDrive = 1
+        self.processor = processorType
 
-    def walk(self, speed):
-        super().walk(speed)
-        print("Walking ", self.type, " Tiger at ", self.speed)
+    def boot(self, speed):
+        super().boot(speed)
+        print(self.bodyStyle, "Booting with", self.processor, "processor in", self.speed, "seconds")
 
+desktop1 = Desktop("AMD")
+desktop2 = Desktop("intel")
+laptop1 = Laptop("M1Pro", True)
 
-dog1 = Dog("Farm")
-dog2 = Dog("Wild")
-tiger1 = Tiger("Wild", 5)
+print(laptop1.camera)
+print(desktop1.processor)
+print(desktop2.cdDrive)
 
-print(tiger1.age)
-print(dog1.type)
-print(dog2.legs)
-
-dog1.walk(30)
-dog2.walk(40)
-tiger1.walk(50)
+desktop1.boot(10)
+desktop2.boot(8)
+laptop1.boot(5)

@@ -34,7 +34,7 @@ def main():
     print (datetime.datetime.fromtimestamp(path.getmtime("newTextFile.txt")))
     
     # get file modified date
-    timeDifference= datetime.datetime.now() - datetime.datetime.fromtimestamp(path.getmtime("newTextFile.txt"))
+    timeDifference= datetime.datetime.now() - datetime.datetime.fromtimestamp(timestamp)
     print ("It has been " + str(timeDifference) + " since the file was modified")
     print ("Or, " + str(timeDifference.total_seconds()) + " seconds")
 

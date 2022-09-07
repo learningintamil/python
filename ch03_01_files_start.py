@@ -5,6 +5,7 @@
 
 def main():  
     # Open file --> write data and create new if it doesn't exist
+    print("Open a file")
 
     
     # Open file --> append text to the end

@@ -2,8 +2,15 @@
 # Learning in Tamil - Python 
 # Example file - filesystem shell methods
 #
+import shutil
+from shutil import make_archive
+from zipfile import ZipFile
+import os
+from os import path
 
-  # How to duplicate an existing file
+def main():
+    print("Shell utilities")
+    # How to duplicate an existing file
 
     # current directory path of the file
     # append "bak" to the name
@@ -13,3 +20,5 @@
     # rename the source file
 
     # add files to a ZIP archive
+if __name__ == "__main__":
+    main()

@@ -5,18 +5,15 @@
 
 def main():
     #DATE
+    print("Date")
     # Get today's date using DATE
 
-
     #components in date
-
     
     # get weekday
-
     
     #DATETIME
     #How to get today's date using DATETIME
-
     
     #How to get current time
   

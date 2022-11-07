@@ -53,7 +53,7 @@ def main():
     parser = MyParser()
       
     # open the HTML 
-    htmlFile = open("inputHTML.html","r")
+    htmlFile = open("input.html","r")
     if htmlFile.mode == "r":
         contents = htmlFile.read() # read the HTML file contents
         parser.feed(contents)

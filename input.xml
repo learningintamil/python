@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<application name="userManagement">
+  <users>
+      <user id="001">
+        <firstname>Joseph</firstname>
+        <lastname>Thomas</lastname>
+        <location>Chennai</location>
+        <role>admin</role>
+        <pages>
+          <page link="login"/>
+          <page link="userInfo"/>
+          <page link="view"/>
+          <page link="logout"/>
+        </pages>
+      </user>
+      <user id="002">
+        <firstname>Alice</firstname>
+        <lastname>Paul</lastname>
+        <location>Delhi</location>
+        <role>HR</role>
+        <pages>
+          <page link="login"/>
+          <page link="userInfo"/>
+          <page link="view"/>
+          <page link="payroll"/>
+          <page link="logout"/>
+        </pages>
+      </user>
+  </users>
+</application>
